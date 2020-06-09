@@ -25,6 +25,8 @@ RUN R -e "install.packages(c('shiny', 'shinydashboard', 'dplyr', 'DT', 'tidyvers
 RUN R -e "install.packages('BiocManager')"
 #RUN R -e "BiocManager::install(c('genefilter', 'geneplotter'))"
 
+RUN R -e "install.packages(c('shinyjs', 'tibble'), repos='http://cran.rstudio.com/')"
+
 RUN R  -e "install.packages('XML')"
 RUN R -e "BiocManager::install('DESeq2')"
 
